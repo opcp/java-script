@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .red{
+            color: aquamarine;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="my_out"></div>
+
+    <script>
+         let my_out = document.querySelector('.my_out');
+    let str = "中職中信明星賽27、28日在新莊球場開打，中信兄弟隊40歲老將彭政閔生涯第19次出賽";
+
+    function showLine(s){
+        my_out.innerHTML += s + '<br>';
+        // my_out.innerHTML = my_out.innerHTML + s + '<br>';
+    }
+
+    showLine( str.length );
+    showLine( str.slice(2, 6) );
+    showLine( str );
+    showLine( str.slice() ); // 從頭到尾
+    showLine( str.slice(38) );
+    showLine( str.split('兄弟').join("")); // 刪除
+    showLine( str.split('桃猿').join('<span> 桃猿 </span>'));// 取代
+
+    </script>
+</body>
+
+</html>
