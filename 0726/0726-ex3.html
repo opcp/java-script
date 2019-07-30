@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        asd{
+            justify-content:spa
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
     <label for="gender">性別</label>
     <br>
-    <select id="gender">
+    <select id="gender" >
         <option value="male">男</option>
         <option value="female">女</option>
     </select>
@@ -29,7 +36,7 @@
             let age = document.querySelector('#age').value;
             let gender = document.querySelector('#gender').value;
 
-            if (gender === 'male' && age >= 20) {
+            if (gender === 'male' && age <= 20) {
             my_out.innerHTML = '歡迎';
         } else{
             my_out.innerHTML = '滾';
