@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="rect"></div>
+
+<script>
+    'use strict';
+    let rect = document.querySelector('#rect');
+
+    const a = function() {
+        rect.innerHTML += 'a begin<br>';
+        b();
+        rect.innerHTML += 'a end<br>';
+    };
+
+    const b = function() {
+        rect.innerHTML += 'b begin<br>';
+        c();
+        rect.innerHTML += 'b end<br>';
+    };
+
+    const c = function() {
+        rect.innerHTML += 'c begin<br>';
+        // ....
+        rect.innerHTML += 'c end<br>';
+    };
+
+    a();
+
+    // 遞迴
+    const m = function(n){
+        if(n<=1)
+            return 1;
+        else
+            return n*m(n-1);
+    };
+
+    rect.innerHTML += m(5);
+</script>
+</body>
+</html>

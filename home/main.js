@@ -24,7 +24,12 @@ text.content = 'hello world';
 // }
 // paper.view.draw();
 
-
+function func(ar){
+    ar.push('abc');
+}
+const bc = [5,6,7];
+func(bc);
+console.log(bc);
 } );
 
 

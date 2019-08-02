@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="rect">
+        <div class="my_">1</div>
+        <div class="my_">2</div>
+        <div class="my_">3</div>
+        <div class="my_">4</div>
+        <div class="my_">5</div>
+        <div class="my_">6</div>
+
+
+    </div>
+
+    <script>
+        let rect = document.querySelector('#rect');
+        let my = rect.querySelectorAll('.my_'), i, ar = [];
+        
+        console.log(my);
+        for (i = 0; i < my.length; i++) {
+            ar.push(my[i]);
+        }
+
+        ar.reverse();
+        console.log(ar);
+
+        for (i = 0; i < ar.length; i++) {
+            rect.appendChild(ar[i]);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

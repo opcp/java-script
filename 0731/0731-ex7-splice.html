@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="rect"></div>
+
+
+<script>
+    let rect = document.querySelector('#rect');
+    const ar = ["a","b","c","d","e","f","g","h","i"];
+
+    let br = ar.slice();
+    rect.innerHTML = JSON.stringify( br.splice(2, 4) ) + '<br>';
+    rect.innerHTML += JSON.stringify(br) + '<br>';
+    rect.innerHTML += '-----<br>';
+
+    br = ar.slice();
+    rect.innerHTML += JSON.stringify( br.splice(2, 0, 55, 22, 33) ) + '<br>';
+    rect.innerHTML += JSON.stringify(br) + '<br>';
+    rect.innerHTML += '-----<br>';
+
+    br = ar.slice();
+    rect.innerHTML += JSON.stringify( br.splice(2, 7, 55, 22, 33) ) + '<br>';
+    rect.innerHTML += JSON.stringify(br) + '<br>';
+    rect.innerHTML += '-----<br>';
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rect"></div>
+
+    <script>
+    
+        function colorcode (r,g,b){
+        let c = r*256*256+g*256 + b;
+         c = c.toString(16)
+        return '#'+'000000'.slice(c.length) +c;
+
+        }
+        console.log(colorcode(0,255,255))
+
+        let rect = document.querySelector('#rect');
+
+        function sum(...n){
+            let i = 0;
+            n.forEach(function(v) {
+                i += v;
+            });
+            return i
+        }
+
+        console.log(sum(3,7,9)) 
+    </script>
+
+
+    
+</body>
+</html>
