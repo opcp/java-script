@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const f = (()=>{
+            let n =6;
+          return (a=1)=>{ 
+             if (n){
+                n--;
+                return n*a;
+             }
+             else{
+                return 0 
+             }  
+          }
+        })()   
+        console.log(f());
+        console.log(f(7));
+        console.log(f(5));
+        console.log(f(4));
+        console.log(f(8));
+        console.log(f(1));
+        console.log(n)
+    </script>
+</body>
+</html>
