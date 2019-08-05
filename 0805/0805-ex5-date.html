@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/lodash.js"></script>
+</head>
+
+<body>
+
+    <div id="rect"></div>
+
+    <script>
+        'use strict';
+        let rect = document.querySelector('#rect');
+        
+
+
+        const dorun = function(){
+            let d =new Date().toString();
+            rect.innerHTML= d.split(' ')[4];
+            setTimeout(dorun,1000)
+        }
+        dorun()
+      
+
+
+
+    </script>
+</body>
+
+</html>

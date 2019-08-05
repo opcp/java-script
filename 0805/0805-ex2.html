@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/lodash.js"></script>
+</head>
+
+<body>
+
+    <div id="rect"></div>
+
+    <script>
+        'use strict';
+        let rect = document.querySelector('#rect');
+
+        for (let i = 1; i <= 10; i++) {
+            setTimeout(function () {
+                rect.innerHTML += i+'<br>';
+            }, 1000*i);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

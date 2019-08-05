@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clock {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            background: #aec;
+            border-radius: 50%
+        }
+
+        .hand {
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+
+        .hand-sec {
+            position: absolute;
+            width: 10px;
+            height: 300px;
+            top: -300px;
+            left: -5px;
+            background: #fcc;
+        }
+
+        .hand-min {
+            position: absolute;
+            width: 10px;
+            height: 300px;
+            top: -300px;
+            left: -5px;
+            background: #acc;
+        }
+
+        .hand-hr {
+            position: absolute;
+            width: 10px;
+            height: 300px;
+            top: -300px;
+            left: -5px;
+            background: #ece;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hand sec-hand">
+            <div class="hand-sec"></div>
+        </div>
+        <div class="hand min-hand">
+            <div class="hand-min"></div>
+        </div>
+        <div class="hand hr-hand">
+            <div class="hand-hr"></div>
+        </div>
+    </div>
+    <script>
+        'use strict';
+        const sec_hand = document.querySelector('.sec-hand');
+        const min_hand = document.querySelector('.min-hand');
+        const hr_hand = document.querySelector('.hr-hand');
+        // sec_hand.style.transform = 'rotate(30deg)';
+
+
+        const doRun = () => {
+            let s = new Date();
+            let n = s.getSeconds();
+            let h = s.getHours();
+            let m = s.getMinutes();
+
+            hr_hand.style.transform = `rotate(${h*30}deg)`;
+            min_hand.style.transform = `rotate(${m*6}deg)`;
+            sec_hand.style.transform = `rotate(${n*6}deg)`;
+
+            setTimeout(doRun, 1000);
+        };
+        doRun();
+
+    </script>
+</body>
+
+</html>
