@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rect">
+        <button>click me 1</button>
+        <button>click me 2</button>
+        <button>click me 3</button>
+
+    </div>
+
+    <script>
+        let rect = document.querySelector('#rect');
+        let btn = document.querySelector('button');
+        let i ;
+        
+        // var handler = function(event){
+        //     alert('hello')
+        //     console.log(event.currentTarget,event.target)
+        // }
+        // rect.addEventListener('click',handler)
+        
+
+        for (i=0 ; i<5 ;i++){
+            rect.addEventListener('click',function(event){
+                alert('hello')
+            console.log(event.currentTarget,event.target)
+            })
+        }
+    </script>
+</body>
+</html>

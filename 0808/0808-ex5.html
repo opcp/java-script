@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #rect {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-color: #c0e8ff;
+            left: 200px;
+        }
+        .ball {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: none;
+            background-color: #fff;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="rect">
+<!--    <div class="ball">88</div>-->
+</div>
+
+
+<script>
+    let rect = document.querySelector('#rect');
+    let b, i;
+    let c = 0; 
+                      
+       var handler = function (event){
+           c++;
+           b = document.createElement('div');
+           b.className='ball';
+           b.innerHTML= c
+           b.style.left=event.offsetX-10+'px';
+           b.style.top=event.offsetY-10+'px';
+           b.style.backgroundColor = `hsl(${parseInt(Math.random()*360)},100%,60%)`;
+           rect.appendChild(b);
+        }
+        rect.addEventListener('mousemove', handler)
+</script>
+</body>
+</html>
