@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #rect {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            background-color: #97beff;
+            left: 100px;
+        }
+        .ball {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000000;
+            background-color: red;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="rect">
+</div>
+<div id="info"></div>
+
+<script>
+    const rect = document.querySelector('#rect');
+    const info = document.querySelector('#info');
+    let b, i;
+    let count = 0;
+
+    const mDown = function(event){
+        rect.addEventListener('mousemove', mMove);
+       
+    };
+    const mUp = function(event){
+        rect.removeEventListener('mousemove', mMove);
+        // rect.removeEventListener('mouseup', mUp);
+    };
+    const mMove = function(event){
+        count ++;
+        let c = count % 255;
+        b = document.createElement('div');
+        b.className = 'ball';
+        b.style.left = event.offsetX - 10 + 'px';
+        b.style.top = event.offsetY - 10 + 'px';
+        // b.style.backgroundColor = `rgb(${c},${c},255)`;
+        rect.appendChild(b);
+
+    };
+    this.addEventListener('mouseup', mUp);
+    rect.addEventListener('mousedown', mDown);
+
+</script>
+</body>
+</html>
