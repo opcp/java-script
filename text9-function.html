@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function print(cows,chickens){
+            let cowString = String(cows);
+            while(cowString.length<3){
+                cowString=`0${cowString}`
+            }
+            console.log(`${cowString} Cows`)
+
+            let chickenString = String(chickens);
+            while(chickenString.length<3){
+                chickenString=`0${chickenString}`
+            }
+            console.log(`${chickenString} Chickens`)
+        }
+            print(8,2)
+    </script>
+</body>
+</html>
