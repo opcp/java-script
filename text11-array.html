@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let day1 = {
+            squirrel: false,
+            events: ["work", "touched tree", "pizza", "running"]
+        };
+        console.log(day1.squirrel);
+        // → false
+        console.log(day1.wolf);
+        // → undefined
+        day1.wolf = false;
+        console.log(day1.wolf);
+        // → false
+
+
+        let objectA = { a: 1, b: 2 };
+        Object.assign(objectA,{ b: 3, c: 4 });
+        console.log(objectA);
+    </script>
+</body>
+
+</html>
